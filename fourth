@@ -1,0 +1,37 @@
+package AI;
+
+//OOPS !!! Be very careful with Lambda Expressions
+//Make Sure You are using Java-8 or above version, you can use any online compiler
+import java.util.Scanner;
+interface Lambda
+{
+int Fibonacci(int a,int b);
+}
+public class Lambdas
+{
+public int[] Fibonacci(int t1,int t2){
+	int a=0;int b=0;int c=1;
+	int ar[] = null;
+	for(int i = 0; i <= t1+t2; i++)
+    {
+        a = b;
+        b = c;
+        c = a + b;
+        System.out.print(a+" ");
+        ar[i]=a;
+    }
+	 	return(ar);
+	}
+public static void main(String arr[])
+{
+Lambda sum = null;
+Scanner in = new Scanner(System.in);
+int x = in.nextInt();
+int y = in.nextInt();
+int ar = (Integer) null;
+ar=sum.Fibonacci(x,y);
+
+System.out.print(y);
+
+}
+}
